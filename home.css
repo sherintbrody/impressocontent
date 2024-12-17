@@ -1,0 +1,417 @@
+
+
+/* Parent container for navbar content */
+.navbar-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Align both menu and icons to the center */
+    align-items: center; /* Vertically align items */
+    padding: 0px 10px; /* Add padding around the navbar */
+    gap: 5px; /* Space between menu and social icons */
+    flex-wrap: wrap;
+}
+
+.navbar-nav {
+    display: flex; /* Align menu items horizontally */
+    justify-content: center; /* Center the menu items */
+    gap: 0px; /* Add space between menu items */
+    margin: 0;
+    flex-wrap: wrap;
+}
+.navbar-brand img {
+    padding: 10px; /* Add padding inside */
+    margin: 0 20px; /* Adjust margins outside */
+    width: 30%;
+    height: auto;
+}
+
+
+.nav-item {
+    text-decoration: none; 
+    color: rgb(0, 0, 0); 
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center
+    
+}
+
+/* Hover effect for menu items */
+.nav-item a:hover {
+    border-radius: 10px;
+    background-color: rgb(255, 253, 253);
+    color: #1f53ce; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+}
+
+.nav-item a {
+    display: inline-block; /* Ensures consistent hover area */
+    padding: 10px 15px; /* Default padding for non-hover state */
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Match the hover transition for smooth resizing */
+}
+
+
+
+.sticky-navbar {
+    position: sticky; /* Make the navbar stick */
+    top: 0; /* Stick it to the top of the viewport */
+    z-index: 1020; /* Make sure the navbar stays on top of other content */
+    background-color: #fff; /* Add background color to ensure visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    padding: 0.5rem 1rem; /* Optional: Adds padding for a better look */
+  }
+
+.social {
+    display: flex; /* Align icons horizontally */
+    justify-content: center; /* Center the social icons */
+    gap: 0px; /* Add space between icons */
+    flex-wrap: wrap;
+}
+
+.social img {
+    width: 30px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.social img:hover {
+    transform: scale(1.2); /* Add hover scaling effect */
+}
+#social-icon{
+    justify-content:left;
+}
+#social-icon img:hover {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow effect */
+    background-color: rgba(107, 218, 248, 0.485);
+}
+
+/* slider */
+
+.swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px; /* Default width for larger screens */
+    height: 350px; /* Default height for larger screens */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px; /* Optional */
+    overflow: hidden; /* Ensure no content flows outside */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+}
+.swiper{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* footer  */
+
+footer { 
+    width: 100% !important;
+    background-color: #009ab2 !important; /* Footer background color */
+    padding: 10px 0 !important; /* Spacing around the footer content */
+    position: relative;
+}
+footer a:hover {
+    color: #0a041a !important; /* Change color on hover with !important */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.441); /* Add a subtle shadow effect to the text */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+footer .container {
+    max-width: 100% !important; /* Limit the footer's width */
+    margin: 0 auto !important;
+}
+footer .row > div {
+    border-right: 1px solid rgba(255, 255, 255, 0.5) !important; /* Add a right border */
+    padding-right: 15px !important; /* Add space inside the columns */
+}
+
+footer .row > div:last-child {
+    border-right: none !important; /* Remove border from the last column */
+}
+
+.footer-text {
+    font-size: 12px; /* Make the text size smaller */
+    text-align: center; /* Align the text to the left */
+    padding-left: 15px; /* Add some padding to the left */
+    color: #ffffff; /* Optional: Set text color to black or any desired color */
+    
+}
+.email-link{
+    color: #ffffff;
+}
+footer a.email-link:hover{
+    color: inherit !important; /* Inherit original color */
+    text-shadow: none !important; /* Remove shadow */
+    transition: none !important; /* Disable transition */
+}
+
+/* Add animation to the navbar-toggler-icon on click */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg); /* Rotate the toggler icon */
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+    transform: rotate(0deg); /* Reset rotation when collapsed */
+    transition: transform 0.3s ease;
+}
+
+h6.text-uppercase {
+    margin-bottom: 20px; /* Default spacing for large screens */
+}
+
+p {
+    margin-bottom: 10px; /* Default paragraph spacing */
+}
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 350px;
+  flex-wrap: wrap;
+}
+                    /*----------------------------------- media query---------------------------*/
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .container-fluid {
+        display: flex; /* Enable Flexbox */
+        flex-direction: row; /* Ensure items are laid out in a row */
+        justify-content: flex-end; /* Push items to the right */
+        align-items: center; /* Align items vertically in the center */
+        padding: 0px; /* Add padding for spacing */
+        gap: 10px; /* Space between elements, if needed */
+    }
+    .navbar-toggler {
+        margin-left: auto;
+    }
+    .navbar-container {
+        align-items: center;
+        gap: 10px; 
+        justify-content: center;
+        margin-left: 30%;
+    }
+    
+
+    .navbar-nav {
+        justify-content: center; 
+        align-items: center;
+        gap: 1px; 
+        
+    }
+    .footer-col{
+        margin-bottom: 30px;
+        width:50%;
+    }
+
+    .social {
+        display: none;
+    }
+   
+    .navbar-brand img {
+        width: 120px; /* Reduce width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    footer .row {
+        text-align: center;
+    }
+    footer .col-md-3,
+    footer .col-md-4,
+    footer .col-md-2 {
+        width: 100%; /* Stack columns vertically */
+        margin-bottom: 20px;
+    }
+    footer .d-flex {
+        flex-direction: column;
+        gap: 15px; /* Add spacing between social icons */
+    }
+    h6.text-uppercase {
+        margin-bottom: 10px;
+    }
+
+    .mb-4.mt-0 {
+        margin-bottom: 8px !important;
+        margin-top: 8px !important;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }  
+    
+    
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    /* Styles for iPad Mini, tablets, and desktop screens up to 1199px */
+    .container-fluid {
+        display: flex;
+        flex-direction: row; /* Layout items horizontally */
+        justify-content: flex-end; /* Align content to the right */
+        align-items: center; /* Vertically center items */
+        padding: 20px; /* Adjust padding for larger screens */
+        gap: 20px; /* Add space between items */
+    }
+    
+    .navbar-container {
+        display: flex; /* Ensure the container is a flexbox */
+        align-items: center;
+        justify-content: flex-end; /* Align navbar to the right */
+        gap: 20px; /* Add space between navbar items */
+        width: 100%; /* Make sure it spans the full width */
+    }
+
+    .navbar-nav {
+        display: flex; /* Layout items horizontally */
+        justify-content: flex-start; /* Align items to the left */
+        align-items: center;
+        gap: 20px; /* Adjust gap between menu items */
+        margin: 0; /* Remove default margin */
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px 15px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .social {
+        display: none;
+    }
+   
+    .navbar-brand img {
+        width: 120px; /* Reduce width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Push button to the right */
+    }
+
+    /* Button or other elements inside navbar */
+    .btn {
+        font-size: 16px; /* Adjust button size */
+    }
+    h6.text-uppercase {
+        margin-bottom: 10px;
+    }
+
+    .mb-4.mt-0 {
+        margin-bottom: 8px !important;
+        margin-top: 8px !important;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }  
+    
+    
+}
+@media only screen and (device-width: 1280px) and (device-height: 800px) and (-webkit-device-pixel-ratio: 2) {
+    /* Your custom styles for Nest Hub Max */
+    .container-fluid {
+        display: flex ;
+        flex-direction: row ; /* Layout items horizontally */
+        justify-content: flex-end ; /* Align content to the right */
+        align-items: center ; /* Vertically center items */
+        padding: 20px; /* Adjust padding for larger screens */
+        gap: 20px; /* Add space between items */
+    }
+    
+    .navbar-container {
+        display: flex ; /* Ensure the container is a flexbox */
+        align-items: center;
+        justify-content: flex-end; /* Align navbar to the right */
+        gap: 20px; /* Add space between navbar items */
+        width: 100%; /* Make sure it spans the full width */
+    }
+
+    .navbar-nav {
+        display: flex ; /* Layout items horizontally */
+        justify-content: flex-start ; /* Align items to the left */
+        align-items: center;
+        gap: 20px; /* Adjust gap between menu items */
+        margin: 0; /* Remove default margin */
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px 15px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .social {
+        display: none ;
+    }
+   
+    .navbar-brand img {
+        width: 120px; /* Reduce width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Push button to the right */
+    }
+
+    /* Button or other elements inside navbar */
+    .btn {
+        font-size: 16px; /* Adjust button size */
+    }
+    h6.text-uppercase {
+        margin-bottom: 10px;
+    }
+
+    .mb-4.mt-0 {
+        margin-bottom: 8px !important;
+        margin-top: 8px !important;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }  
+}
+/* Responsive styling for phones */
+@media (max-width: 768px) {
+    .swiper .swiper-slide {
+        width: 250px !important; /* Adjust width for smaller screens */
+        height: 250px !important; /* Adjust height */
+        padding: 15px !important;
+        font-size: 14px !important; /* Reduce font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper .swiper-slide {
+        width: 200px !important; /* Further reduce width */
+        height: 200px !important; /* Further reduce height */
+        padding: 10px !important;
+        font-size: 12px !important; /* Smaller font size */
+        line-height: 1.2 !important; /* Adjust line spacing */
+    }
+}
+
+
+
+
+
+
