@@ -21,4 +21,25 @@ var swiper = new Swiper(".swiper", {
         slideShadows: true,
     },
 });
+// Add hover effect for the main active slide
+const swiperContainer = document.querySelector('.swiper');
+
+// Add event listeners after Swiper is initialized
+swiperContainer.addEventListener('mouseover', (event) => {
+    const activeSlide = document.querySelector('.swiper-slide-active');
+    if (activeSlide) {
+        activeSlide.style.transform = 'scale(1.02) translateY(1px)';
+        activeSlide.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.5)';
+        activeSlide.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+        
+    }
+});
+
+swiperContainer.addEventListener('mouseout', (event) => {
+    const activeSlide = document.querySelector('.swiper-slide-active');
+    if (activeSlide) {
+        activeSlide.style.transform = 'scale(1)';
+        activeSlide.style.boxShadow = 'none';
+    }
+});
   
